@@ -1,0 +1,273 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: rgba(255,255,255,0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* Container do Header */
+.header .container {
+  display: flex;
+  justify-content: space-between; /* logo à esquerda, menu à direita */
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* Logo + Texto */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* <--- reduzir distância entre logo e texto */
+}
+
+.logo-img {
+  width: 40px; /* você pode ajustar */
+  height: auto;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0D47A1;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0D47A1;
+}
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #0D47A1;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: #1E88E5;
+}
+.btn-primary {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background: #43A047;
+}
+
+/* Hero */
+.hero {
+  background: url('images/apartamento-limpo.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #43A047;
+  padding: 0 20px;
+}
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  background: radial-gradient(black, transparent);
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+  background: radial-gradient(black, transparent);
+}
+
+/* Seção Serviços */
+.servicos {
+  padding: 100px 0;
+  background: #f5f9ff;
+}
+.servicos h3 {
+  font-size: 36px;
+  color: #0D47A1;
+  margin-bottom: 10px;
+}
+.servicos p {
+  margin-bottom: 50px;
+  color: #555;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card h4 {
+  margin: 15px 0 10px;
+  color: #0D47A1;
+}
+.card p {
+  padding: 0 15px 20px;
+  color: #555;
+}
+
+/* Como Funciona */
+.como-funciona {
+  padding: 100px 0;
+  background: #e3f2fd;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+.step {
+  flex: 1 1 250px;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.step span {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 15px;
+}
+.step h4 {
+  color: #0D47A1;
+  margin-bottom: 10px;
+}
+
+/* Depoimentos */
+.depoimentos {
+  padding: 100px 0;
+}
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+.testimonial {
+  background: #f5f9ff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.testimonial h4 {
+  color: #0D47A1;
+  margin-top: 15px;
+}
+
+/* CTA Final */
+.cta-final {
+  padding: 100px 0;
+  background: #0D47A1;
+  color: white;
+}
+.cta-final h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.cta-final p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+/* Footer moderno */
+.footer {
+  background: #0B3954; /* fundo azul escuro */
+  color: white;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer .footer-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4CAF50; /* destaque verde limpeza */
+  margin-bottom: 10px;
+}
+
+.footer .footer-links,
+.footer .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer .footer-links a,
+.footer .socials a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer .footer-links a:hover,
+.footer .socials a:hover {
+  color: #4CAF50;
+}
+
+.footer .socials {
+  flex-direction: row;
+  gap: 15px;
+}
+
+.footer .copyright {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #ccc;
+}
+
