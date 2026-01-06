@@ -271,3 +271,53 @@ body {
   color: #ccc;
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+
+  /* Header container: empilhar logo e menu em telas pequenas */
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  /* Logo + texto centralizado no topo */
+  .logo-container {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Menu: transformar em coluna */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav a {
+    margin: 5px 0; /* Espaçamento vertical */
+  }
+
+  /* Botão Orçamento maior e ajustável */
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .servicos h3,
+  .como-funciona h3,
+  .cta-final h3 {
+    font-size: 28px;
+  }
+}
