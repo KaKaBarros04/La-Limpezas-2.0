@@ -31,7 +31,7 @@
   <section class="hero">
     <div class="hero-content">
       <h2>Serviço de Limpeza Profissional</h2>
-      <p>Rápido, confiável e feito sob medida para sua casa ou empresa.</p>
+      <p>Equipe treinada, produtos seguros e resultados que você vai ver e sentir.</p>
       <a href="#contato" class="btn-primary">Agende Agora</a>
     </div>
   </section>
@@ -45,22 +45,22 @@
         <div class="card">
           <img src="images/residencial.jpg" alt="Residencial">
           <h4>Limpeza Residencial</h4>
-          <p>Serviços rápidos e detalhados para sua casa.</p>
+          <p>Limpeza profunda com atenção aos detalhes, incluindo cozinha e banheiros.</p>
         </div>
         <div class="card">
           <img src="images/empresarial.jpg" alt="Empresarial">
           <h4>Limpeza Empresarial</h4>
-          <p>Ambientes corporativos limpos e organizados.</p>
+          <p>Ambientes corporativos prontos para receber clientes e colaboradores, mantendo a higiene e organização.</p>
         </div>
         <div class="card">
           <img src="images/pos-obra.jpg" alt="Pós-obra">
           <h4>Limpeza Pós-Obra</h4>
-          <p>Removemos toda a sujeira depois da construção.</p>
+          <p>Removemos poeira, resíduos de construção e manchas, deixando seu espaço pronto para uso imediato.</p>
         </div>
         <div class="card">
           <img src="images/estofados.jpg" alt="Estofados">
           <h4>Limpeza de Estofados</h4>
-          <p>Cuidamos de sofás, poltronas e carpetes.</p>
+          <p>Trata manchas e odores, preservando tecidos e aumentando a durabilidade dos móveis.</p>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@
         <div class="step">
           <span>✅</span>
           <h4>3. Satisfação</h4>
-          <p>Seu espaço limpo e você totalmente satisfeito.</p>
+          <p>Aproveite seu espaço impecável e seguro.</p>
         </div>
       </div>
     </div>
@@ -116,8 +116,13 @@
   <section id="contato" class="cta-final">
     <div class="container text-center">
       <h3>Pronto para ter seu espaço limpo?</h3>
-      <p>Entre em contato agora e agende seu serviço de limpeza profissional.</p>
-      <a href="mailto:lalimpezaspt@gmail.com" class="btn-primary">Solicitar Orçamento</a>
+      <p>Descreva seu serviço e nossa equipe entrará em contato em até 30 minutos. Garantimos atendimento rápido e profissional.</p>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="message" placeholder="Descreva os serviços que você precisa..." required></textarea>
+        <button type="submit" class="btn">Solicitar Orçamento Agora</button>
+    </form>
     </div>
   </section>
 <footer class="footer">
@@ -150,9 +155,13 @@
 
   <!-- Copyright -->
   <div class="copyright">
-    © 2026 LA Limpezas. Todos os direitos reservados.
+    © 2026 L&A Limpezas. Todos os direitos reservados.
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+<script src="script.js" defer></script>
+
 
 </body>
+
 </html>

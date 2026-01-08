@@ -207,6 +207,7 @@ body {
   padding: 100px 0;
   background: #0D47A1;
   color: white;
+  text-align: center;
 }
 .cta-final h3 {
   font-size: 36px;
@@ -216,6 +217,44 @@ body {
   font-size: 18px;
   margin-bottom: 30px;
 }
+
+/* Contact form */
+.contact-form {
+  margin: 25px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: center;
+    padding: 15px;
+    border-radius: 9999px;
+    border-block: aliceblue;
+    border: 2px solid #43A047;
+}
+
+.contact-form button:hover {
+  background-color: #43A047;
+  color: aliceblue;
+}
+
+
 /* Footer moderno */
 .footer {
   background: #0B3954; /* fundo azul escuro */
@@ -321,3 +360,4 @@ body {
     font-size: 28px;
   }
 }
+ 
