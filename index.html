@@ -11,26 +11,44 @@
 <body>
 
   <!-- Header -->
-  <header class="header">
+ <header class="header">
   <div class="container">
     <div class="logo-container">
       <img src="images/LA1.jpg" alt="Logo LA Limpezas" class="logo-img">
       <h1 class="logo-text">L&A Limpezas</h1>
     </div>
-    <nav class="nav" id="nav">
+
+    <!-- NAV DESKTOP -->
+    <nav class="nav nav-desktop">
       <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Como Funciona</a>
       <a href="#contato">Contato</a>
       <a href="mailto:lalimpezaspt@gmail.com" class="btn-primary">Solicitar Orçamento</a>
     </nav>
 
-    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+    <!-- BOTÃO HAMBURGER (mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
       <span></span>
       <span></span>
       <span></span>
     </button>
-
   </div>
+
+  <!-- OVERLAY -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- DRAWER MOBILE -->
+  <nav class="drawer" id="mobile-drawer" aria-hidden="true" aria-label="Menu principal">
+    <div class="drawer-header">
+      <strong>Menu</strong>
+      <button class="drawer-close" id="drawer-close" aria-label="Fechar menu">✕</button>
+    </div>
+
+    <a href="#servicos">Serviços</a>
+    <a href="#como-funciona">Como Funciona</a>
+    <a href="#contato">Contato</a>
+    <a href="mailto:lalimpezaspt@gmail.com" class="btn-primary">Solicitar Orçamento</a>
+  </nav>
 </header>
 
 
@@ -167,7 +185,7 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 <script src="script.js" defer></script>
-
+ 
 
 </body>
 
