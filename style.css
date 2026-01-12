@@ -36,6 +36,14 @@ body {
   padding: 15px 0;
 }
 
+  .header {
+  transition: transform 0.25s ease;
+}
+
+.header.hide {
+  transform: translateY(-100%);
+}
+
 /* Logo + Texto */
 .logo-container {
   display: flex;
@@ -207,6 +215,7 @@ body {
   padding: 100px 0;
   background: #0D47A1;
   color: white;
+  text-align: center;
 }
 .cta-final h3 {
   font-size: 36px;
@@ -216,6 +225,44 @@ body {
   font-size: 18px;
   margin-bottom: 30px;
 }
+
+/* Contact form */
+.contact-form {
+  margin: 25px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: center;
+    padding: 15px;
+    border-radius: 9999px;
+    border-block: aliceblue;
+    border: 2px solid #43A047;
+}
+
+.contact-form button:hover {
+  background-color: #43A047;
+  color: aliceblue;
+}
+
+
 /* Footer moderno */
 .footer {
   background: #0B3954; /* fundo azul escuro */
@@ -271,3 +318,140 @@ body {
   color: #ccc;
 }
 
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px 0;
+  background: #0D47A1;
+  border-radius: 999px;
+}
+
+/* Desktop vs Mobile */
+.nav-desktop { display: flex; }
+
+/* Overlay do drawer */
+.drawer-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 150;
+}
+
+/* Drawer (painel lateral) */
+.drawer{
+  position: fixed;
+  top: 0;
+  right: 0;              /* <- DIREITA */
+  /* left: 0; right: auto;  <- se quiser ESQUERDA, troca pra isso */
+  height: 100vh;
+  width: min(320px, 85vw);
+  background: #fff;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.18);
+  transform: translateX(100%);   /* <- DIREITA */
+  /* transform: translateX(-100%); <- ESQUERDA */
+  transition: transform 0.25s ease;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.drawer-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin-bottom: 6px;
+}
+
+.drawer-close{
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.drawer a{
+  color: #0D47A1;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 8px;
+  border-radius: 10px;
+}
+
+.drawer a:hover{
+  background: rgba(13,71,161,0.06);
+}
+
+.drawer .btn-primary{
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Estado aberto */
+body.drawer-open{
+  overflow: hidden;
+}
+body.drawer-open .drawer-overlay{
+  opacity: 1;
+  pointer-events: auto;
+}
+body.drawer-open .drawer{
+  transform: translateX(0);
+}
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: row; /* mantém logo + hamburger na mesma linha */
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+.nav-desktop { display: none; }
+
+  .hamburger {
+    display: inline-block;
+  }
+
+ .drawer .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .servicos h3,
+  .como-funciona h3,
+  .cta-final h3 {
+    font-size: 28px;
+  }
+}
